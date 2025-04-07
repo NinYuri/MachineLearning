@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPERATURA</title>
+    <link rel="icon" href="assets/images/Temperatura.ico">
+    <meta name="title" content="TEMPERATURA">
+    <meta name="description" content="Aplicacion de Modelo DeepLearning por NinYuri">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <h1 data-text="CELSIUS">CELSIUS</h1>
+    </div>    
+
+    <section class="container">
+        <div class="logo">
+            <div class="scale">
+                <div class="marker" style="--pos: 0%">-273.15°</div>
+                <div class="marker" style="--pos: 66%">0°</div>
+                <div class="marker" style="--pos: 93%">100°</div>
+            </div>
+
+            <div class="bar">
+                <div class="mercury"></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="controls-colums">
+            <div class="controls">
+                <input type="number" id="tempInputC" min="-273.15" max="100" oninput="updateTemp(); predictTemp()">            
+                <h2>&nbsp;&nbsp;°C</h2>
+            </div>
+    
+            <div class="controls">
+                <h2 id="currentTemp">&nbsp;&nbsp;°F</h2>
+            </div>
+        </div>
+
+        <div class="logo">
+            <div class="scale">
+                <div class="marker" style="--pos: 0%">-459.67°</div>
+                <div class="marker" style="--pos: 62%">0°</div>
+                <div class="marker" style="--pos: 93%">212°</div>
+            </div>
+
+            <div class="bar">
+                <div class="mercury-f"></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+    </section>
+    
+    <div class="title" id="fah">
+        <h1 data-text="FAHRENHEIT">FAHRENHEIT</h1>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
